@@ -31,7 +31,14 @@
                             <outlet property="delegate" destination="x9r-Un-a01" id="gjh-Wl-tn2"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ToDoKai" id="hKn-qC-AtR"/>
+                    <navigationItem key="navigationItem" title="ToDoKai" id="hKn-qC-AtR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wz1-Sb-0kv">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="addButtonPressed:" destination="x9r-Un-a01" id="Mq7-KS-1BJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eJA-RD-eCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
