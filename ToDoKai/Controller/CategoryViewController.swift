@@ -48,7 +48,10 @@ class CategoryViewController: UITableViewController {
         let destinationVC = segue.destination as! ToDoListViewController
         
         if let indexPath = tableView.indexPathForSelectedRow {
-            destinationVC.selectedCategory = categoryArray[indexPath.row]
+            
+            let selectedRow = categoryArray[indexPath.row]
+            destinationVC.selectedCategory = selectedRow
+            destinationVC.title = selectedRow.name!
         }
     }
     //MARK : Add New Category

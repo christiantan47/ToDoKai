@@ -15,6 +15,7 @@ class ToDoListViewController: UITableViewController {
     
     var selectedCategory : Category? {
         didSet{
+            print("a")
             loadItems()
         }
     }
@@ -119,7 +120,7 @@ class ToDoListViewController: UITableViewController {
     
     func loadItems(with request:NSFetchRequest<Items> = Items.fetchRequest(), predicate : NSPredicate? = nil){
 
-        let categoryPredicate = NSPredicate(format: "parentCategory.name MATCHES %@", selectedCategory!.name!)
+        let categoryPredicate = NSPredicate(format : "parentCategory.name MATCHES %@", selectedCategory!.name!)
         
         if let additionalPredicate = predicate {
             request.predicate = NSCompoundPredicate(andPredicateWithSubpredicates: [categoryPredicate, additionalPredicate])
